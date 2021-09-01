@@ -14,4 +14,4 @@ jobs:
       - run:
           name: "Build docker image"
           command: |
-            docker build --pull -t albumcollection . -f albumcollection/Dockerfile
+            docker build --pull -t albumcollection . -f aspnetcore-albumcollection-sampleproject/Dockerfile
