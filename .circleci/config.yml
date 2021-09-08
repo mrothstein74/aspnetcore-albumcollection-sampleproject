@@ -12,6 +12,6 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-          name: "Build docker image"
+          name: "Build albumcollection image and sql server image"
           command: |
-            docker build --pull -t albumcollection . -f Dockerfile
+            docker-compose build --pull
