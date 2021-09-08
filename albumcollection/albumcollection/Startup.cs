@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using albumcollection.Data;
+using albumcollection.services;
 
 namespace albumcollection
 {
@@ -29,11 +30,13 @@ namespace albumcollection
             services.AddControllersWithViews();
 
             services.AddDbContext<MvcAlbumContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("MvcAlbumContext")));
+            options.UseSqlServer(Configuration.GetConnectionString("MvcAlbumContext")));
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            DatabaseManagementService.MigrationInitialisation(app);
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -6,6 +6,7 @@
     <UserSecretsId>1b87735c-2532-47a7-abf2-f6efe5c0b5aa</UserSecretsId>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <AssemblyName>albumscollection</AssemblyName>
+    <Configurations>Release;Debug</Configurations>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -17,9 +18,11 @@
     <None Remove="Microsoft.VisualStudio.Web.CodeGeneration.Design" />
     <None Remove="Microsoft.EntityFrameworkCore.SqlServer" />
     <None Remove="Microsoft.EntityFrameworkCore.Design" />
+    <None Remove="services\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\HelloWorld\" />
+    <Folder Include="services\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.9" />

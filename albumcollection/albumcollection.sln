@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.810.8
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "albumcollection", "albumcollection\albumcollection.csproj", "{C4EDDF43-FEA8-4084-B579-442D3D5C5EB2}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{03325DEF-E6B3-4F88-8670-17F8E08BEC71}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{C4EDDF43-FEA8-4084-B579-442D3D5C5EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4EDDF43-FEA8-4084-B579-442D3D5C5EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4EDDF43-FEA8-4084-B579-442D3D5C5EB2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{03325DEF-E6B3-4F88-8670-17F8E08BEC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{03325DEF-E6B3-4F88-8670-17F8E08BEC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{03325DEF-E6B3-4F88-8670-17F8E08BEC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{03325DEF-E6B3-4F88-8670-17F8E08BEC71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
