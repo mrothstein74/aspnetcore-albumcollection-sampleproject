@@ -15,3 +15,6 @@ jobs:
           name: "Build albumcollection image and sql server image"
           command: |
             docker-compose build --pull
+      - run:
+          name: Run tests
+          command: dotnet test
