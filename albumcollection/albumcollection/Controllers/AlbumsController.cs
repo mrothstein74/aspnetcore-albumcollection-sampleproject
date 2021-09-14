@@ -19,6 +19,10 @@ namespace albumcollection.Controllers
             _context = context;
         }
 
+   
+        public IEnumerable<Album> Get()
+            => _context.Set<Album>().Include(e => e.Artist).OrderBy(e => e.Title);
+
         // GET: Albums
         public async Task<IActionResult> Index()
         {
