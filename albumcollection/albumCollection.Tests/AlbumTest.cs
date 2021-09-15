@@ -21,7 +21,7 @@ namespace albumCollection.Tests
         public async void GetAlbumbyId()
         {
             mock.Setup(p => p.GetAlbumbyId(1)).ReturnsAsync("Low Budget");
-            AlbumsController album = new AlbumsController(mock.Object);
+            AlbumsController album = new AlbumsController(mock.Object, "test");
             string result = await album.GetAlbumbyId(1);
             Assert.Equal("Low Budget", result);
         }
@@ -38,7 +38,7 @@ namespace albumCollection.Tests
                 ReleaseYear = "1979"
             };
             mock.Setup(p => p.GetAlbumDetails(1)).ReturnsAsync(albumData);
-            AlbumsController album = new AlbumsController(mock.Object);
+            AlbumsController album = new AlbumsController(mock.Object, "test");
             var result = await album.GetAlbumDetails(1);
             Assert.True(albumData.Equals(result));
         }

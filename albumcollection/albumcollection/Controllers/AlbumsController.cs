@@ -25,12 +25,14 @@ namespace albumcollection.Controllers
             _context = context;
         }
 
+        
         #region Constructor
-        public AlbumsController(IAlbumService albumService)
+        public AlbumsController(IAlbumService albumService, string msg)
         {
             _albumService = albumService;
         }
         #endregion
+      
 
 
         public IEnumerable<Album> Get()
