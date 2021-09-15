@@ -27,4 +27,4 @@ jobs:
       - run:
           name: "Running tests"
           command: |
-            dotnet test
+            dotnet test /albumcollection
