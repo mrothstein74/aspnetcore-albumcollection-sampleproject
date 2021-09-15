@@ -13,11 +13,7 @@ namespace albumcollection.Controllers
 {
     public class AlbumsController : Controller
     {
-        #region Property
-        private readonly IAlbumService _albumService;
-        #endregion
-
-
+     
         private readonly MvcAlbumContext _context;
 
         public AlbumsController(MvcAlbumContext context)
@@ -25,16 +21,7 @@ namespace albumcollection.Controllers
             _context = context;
         }
 
-        
-        #region Constructor
-        public AlbumsController(IAlbumService albumService, string msg)
-        {
-            _albumService = albumService;
-        }
-        #endregion
-      
-
-
+ 
         public IEnumerable<Album> Get()
             => _context.Set<Album>().Include(e => e.Artist).OrderBy(e => e.Title);
 
@@ -162,19 +149,6 @@ namespace albumcollection.Controllers
             _context.Album.Remove(album);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
-        }
-
-        [HttpGet(nameof(GetAlbumbyId))]
-        public async Task<string> GetAlbumbyId(int AlbumID)
-        {
-            var result = await _albumService.GetAlbumbyId(AlbumID);
-            return result;
-        }
-        [HttpGet(nameof(GetAlbumDetails))]
-        public async Task<Album> GetAlbumDetails(int AlbumID)
-        {
-            var result = await _albumService.GetAlbumDetails(AlbumID);
-            return result;
         }
 
         private bool AlbumExists(int id)
