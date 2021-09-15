@@ -10,6 +10,8 @@ RUN ["dotnet", "restore"]
 
 RUN ["dotnet", "build"]
 
+RUN ["dotnet", "test"]
+
 EXPOSE 80/tcp
 
 RUN chmod +x ./entrypoint.sh
