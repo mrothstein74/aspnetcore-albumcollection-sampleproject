@@ -31,8 +31,8 @@ jobs:
       - run:
           name: "print dir"
           command: |
-            ls -al ./albumcollection/albumcollection
-            ls -al ./albumcollection.Tests
+            pwd
+            ls -al ./albumcollection
 
       
             
