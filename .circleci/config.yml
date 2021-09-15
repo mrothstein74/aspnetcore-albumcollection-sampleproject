@@ -31,7 +31,7 @@ jobs:
             dotnet test ./albumcollection --logger:"junit;LogFilePath=tests/test-results.xml"
           when: always
       - store_test_results:
-          path: ./albumcollection/albumCollection.Tests
+          path: ./albumcollection/albumCollection.Tests/tests
       - run:
           name: "print dir"
           command: |
