@@ -28,7 +28,7 @@ jobs:
           name: "Running tests"
           command: |
             mkdir ~/test-results/
-            dotnet test ./albumcollection --logger:"junit;LogFilePath=test-results.xml"
+            dotnet test ./albumcollection --logger:"junit;LogFilePath=tests/test-results.xml"
           when: always
       - store_test_results:
           path: ./albumcollection/albumCollection.Tests

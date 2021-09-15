@@ -1,0 +1,16 @@
+<testsuites>
+  <testsuite name="albumCollection.Tests.dll" tests="2" skipped="0" failures="0" errors="0" time="0.1110397" timestamp="2021-09-15T22:54:41" hostname="Michaels-MacBook-Pro" id="0" package="albumCollection.Tests.dll">
+    <properties />
+    <testcase classname="albumCollection.Tests.AlbumTest" name="albumCollection.Tests.AlbumTest.GetAlbumDetails" time="0.1076378" />
+    <testcase classname="albumCollection.Tests.AlbumTest" name="albumCollection.Tests.AlbumTest.GetAlbumbyId" time="0.0034019" />
+    <system-out>
+Test Framework Informational Messages:
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 5.0.10)
+[xUnit.net 00:00:01.45]   Discovering: albumCollection.Tests
+[xUnit.net 00:00:01.48]   Discovered:  albumCollection.Tests
+[xUnit.net 00:00:01.48]   Starting:    albumCollection.Tests
+[xUnit.net 00:00:01.66]   Finished:    albumCollection.Tests
+</system-out>
+    <system-err></system-err>
+  </testsuite>
+</testsuites>
