@@ -32,7 +32,7 @@ jobs:
           name: "print dir"
           command: |
             pwd
-            ls -al ./albumcollection/albumcollection.Tests
+            ls -al 
 
       
             
