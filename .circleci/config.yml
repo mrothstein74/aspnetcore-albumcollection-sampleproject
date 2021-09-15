@@ -28,15 +28,15 @@ jobs:
           name: "Running tests"
           command: |
             mkdir ~/test-results/
-            dotnet test ./albumcollection --logger:"junit;LogFilePath=~/test-results/albumcollection-test-results.xml"
+            dotnet test ./albumcollection --logger:"junit;LogFilePath=test-results.xml"
           when: always
       - store_test_results:
-          path: ~/test-results/
+          path: ./albumcollection/albumCollection.Tests
       - run:
           name: "print dir"
           command: |
             pwd
-            ls -al ~/test-results/
+            ls -al ./albumcollection/albumCollection.Tests
 
       
             
