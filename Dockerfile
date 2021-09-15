@@ -6,11 +6,13 @@ COPY entrypoint.sh /app
 
 WORKDIR /app
 
+RUN ["dotnet", "add package JUnitTestLogger --version 1.1.0"]
+
 RUN ["dotnet", "restore"]
 
 RUN ["dotnet", "build"]
 
-RUN ["dotnet", "test"]
+RUN ["dotnet", "test --logger junit;LogFilePath=./testresults.xml"]
 
 EXPOSE 80/tcp
 
