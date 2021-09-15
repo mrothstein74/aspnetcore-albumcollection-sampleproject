@@ -32,7 +32,7 @@ jobs:
           name: "print dir"
           command: |
             ls -al ./albumcollection/albumcollection
-            ls -al ./albumcollection/albumcollection.Tests
+            ls -al ./albumcollection.Tests
 
       
             
