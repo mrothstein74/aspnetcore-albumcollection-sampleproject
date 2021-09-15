@@ -8,12 +8,15 @@ jobs:
   build-and-test:
     docker:
       - image: cimg/base:2021.04
+    dependencies:
+      pre:
+        - sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list' 
+        - sudo apt-key adv --keyserver apt-mo.trafficmanager.net --recv-keys 417A0893
+        - sudo apt-get update 
+      override:
+        - sudo apt-get install -y dotnet-sdk-5.0 
     steps:
       - checkout
-      - run:
-          name: "Install dotnet sdk"
-          command: |
-            sudo apt-get install -y dotnet-sdk-5.0
       - setup_remote_docker
       - run:
           name: "Build albumcollection image and sql server image"
