@@ -19,6 +19,7 @@ jobs:
             sudo apt-get install -y apt-transport-https && \
             sudo apt-get update && \
             sudo apt-get install -y dotnet-sdk-5.0
+            dotnet tool install --global dotnet-xunit-to-junit --version 2.0.2
       - setup_remote_docker
       - run:
           name: "Build albumcollection image and sql server image"
