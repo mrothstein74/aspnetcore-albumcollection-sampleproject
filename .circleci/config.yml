@@ -27,7 +27,11 @@ jobs:
       - run:
           name: "Running tests"
           command: |
-            > dotnet test --logger:"junit;LogFilePath=./albumcollection/test-result.xml"
+            dotnet test --logger:"junit;LogFilePath=./albumcollection/test-result.xml"
+      - run:
+          name: "print dir"
+          command: |
+            ls -al ./albumcollection
 
       
             
