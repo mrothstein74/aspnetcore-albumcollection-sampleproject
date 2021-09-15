@@ -6,8 +6,6 @@ COPY entrypoint.sh /app
 
 WORKDIR /app
 
-RUN ["dotnet", "add package JUnitTestLogger --version 1.1.0"]
-
 RUN ["dotnet", "restore"]
 
 RUN ["dotnet", "build"]
