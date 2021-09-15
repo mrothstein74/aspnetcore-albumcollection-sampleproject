@@ -10,3 +10,9 @@ done
 
 >&2 echo "SQL Server is up - executing command"
 exec $run_cmd
+
+until dotnet test; do
+>&2 echo "Executing unit tests..."
+sleep 1
+done
+

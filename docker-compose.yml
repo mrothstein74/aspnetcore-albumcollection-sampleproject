@@ -8,7 +8,6 @@ services:
         environment:
             - ASPNETCORE_ENVIRONMENT=Development
             - ASPNETCORE_URLS=http://+:80
-        command: dotnet test
         depends_on:
             - db
     db:
