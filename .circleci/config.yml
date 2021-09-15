@@ -19,7 +19,7 @@ jobs:
             sudo apt-get install -y apt-transport-https && \
             sudo apt-get update && \
             sudo apt-get install -y dotnet-sdk-5.0
-            dotnet tool install --global dotnet-xunit-to-junit --version 2.0.2
+            dotnet add package JunitXml.TestLogger --version 3.0.98
       - setup_remote_docker
       - run:
           name: "Build albumcollection image and sql server image"
@@ -28,5 +28,5 @@ jobs:
       - run:
           name: "Running tests"
           command: |
-            dotnet test ./albumcollection --logger trx
-            dotnet xunit-to-junit "./albumcollection/albumcollection.Tests/*.trx" "./albumcollection/albumcollection.Tests/output.xml"
+            dotnet test --logger:"junit;LogFilePath=./albumcollection/test-result.xml"
+      
