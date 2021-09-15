@@ -10,8 +10,6 @@ RUN ["dotnet", "restore"]
 
 RUN ["dotnet", "build"]
 
-RUN ["dotnet", "test --logger junit;LogFilePath=./testresults.xml"]
-
 EXPOSE 80/tcp
 
 RUN chmod +x ./entrypoint.sh
