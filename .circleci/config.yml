@@ -30,7 +30,9 @@ jobs:
             mkdir test-results
             dotnet test ./albumcollection --logger:"junit;LogFilePath=test-results/albumcollection/xunit.xml"
       - store_test_results:
-          path: albumcollection/albumCollection.Tests/test-results/albumcollection
+          path: albumcollection/albumCollection.Tests/test-results
+      - store_artifacts:
+          path: albumcollection/albumCollection.Tests/test-results
     
 
       
