@@ -28,14 +28,10 @@ jobs:
           name: "Running tests"
           command: |
             mkdir test-results
-            dotnet test ./albumcollection --logger:"junit;LogFilePath=test-results/xunit.xml"
+            dotnet test ./albumcollection --logger:"junit;LogFilePath=test-results/albumcollection/xunit.xml"
       - store_test_results:
           path: albumcollection/albumCollection.Tests/test-results
-      - run:
-          name: "print dir"
-          command: |
-            pwd
-            ls -al ./albumcollection/albumCollection.Tests
+    
 
       
             
